@@ -1,11 +1,11 @@
 import React from 'react'
 import Article from './Article'
 
-export default function ArticleList(props) {
+const ArticleList = (props) => {
     const {articles} = props;
     const articleElements = articles.map((article) =>
       <li key={article.id}>
-        <Article article={article}/>
+        <Article article={article} />
       </li>);
 
     return (
@@ -13,4 +13,6 @@ export default function ArticleList(props) {
             {articleElements}
         </ul>
     )
-}
+};
+
+export default ArticleList;

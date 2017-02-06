@@ -18,15 +18,22 @@ export default class CommentsList extends Component {
         if (!this.state.isOpen) return null;
 
         const {comments} = this.props;
-        const commentElements = comments.map((comment) =>
-        <li key={comment.id}>
-            <div>
-                <b>User: {comment.user}</b>
-            </div>
-            <div>
-                {comment.text}
-            </div>
-        </li>);
+
+        let commentElements;
+
+        if (comments) {
+          commentElements = comments.map((comment) =>
+            <li key={comment.id}>
+                <div>
+                    <b>User: {comment.user}</b>
+                </div>
+                <div>
+                  {comment.text}
+                </div>
+            </li>);
+        } else {
+          commentElements = <div>Комментариев нет</div>
+        }
 
         return (
             <section>
