@@ -18,6 +18,7 @@ export default class CommentsList extends Component {
         if (!this.state.isOpen) return null;
 
         const {comments} = this.props;
+        //comments может быть undefined
         const commentElements = comments.map((comment) =>
         <li key={comment.id}>
             <div>
