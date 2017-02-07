@@ -10,12 +10,12 @@ export default class Comment extends Component {
     };
 
     render() {
-      const {comment} = this.props;
+      const {comment: {text, user}} = this.props;
 
       return (
         <div>
-            {comment.text}
-            user && <b> by {comment.user}</b>
+            {text}
+            user && <b> by {user}</b>
         </div>
       )
     }
