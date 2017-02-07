@@ -8,9 +8,11 @@ export default (Component) => class WrappedComponent extends React.Component {
 
     toggleOpenArticle = openArticleId => ev => {
         ev && ev.preventDefault && ev.preventDefault();
+
         this.setState({
-            openArticleId
+            openArticleId: this.state.openArticleId == openArticleId ? null : openArticleId
         })
+
     };
 
 
