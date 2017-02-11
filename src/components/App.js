@@ -1,5 +1,7 @@
 import React, { PropTypes, Component } from 'react'
 import ArticleList from './ArticleList'
+import Calendar from './Calendar'
+
 
 class App extends Component {
 
@@ -8,6 +10,7 @@ class App extends Component {
         return (
             <div>
                 <ArticleList articles={articles} isOpenItem='' toggleOpenItem=''/>
+                <Calendar/>
             </div>
         )
     }
