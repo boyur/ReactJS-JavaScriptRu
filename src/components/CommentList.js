@@ -69,6 +69,7 @@ class CommentList extends Component {
     handleSubmit = (ev) => {
         alert('User: ' + ev.target.user.value +
               '\nComment: ' + ev.target.comment.value);
+        ev.target.reset();
         ev.preventDefault();
     }
 }
