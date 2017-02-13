@@ -51,7 +51,7 @@ class CommentList extends Component {
 
     addComment() {
         if (!this.state.isOpen) return null;
-
+        //форму стоит вынести в отдельный компонент
         return <Form onSubmit={this.handleSubmit}>
                   <Input type="text" name="user" hint="User"/>
                   <Textarea name="comment" hint="Text..."/>
@@ -67,6 +67,7 @@ class CommentList extends Component {
     };
 
     handleSubmit = (ev) => {
+        //Не лезь в DOM. держи значения в стейте, хочешь обнулить - просто делаешь setState с ‘’ значениями
         alert('User: ' + ev.target.user.value +
               '\nComment: ' + ev.target.comment.value);
         ev.target.reset();
