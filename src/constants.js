@@ -1,3 +1,5 @@
 export const INCREMENT = 'INCREMENT'
 
 export const DELETE_ARTICLE = 'DELETE_ARTICLE'
+
+export const DATA_FILTER_ARTICLE = 'DATA_FILTER_ARTICLE'
