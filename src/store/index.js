@@ -16,6 +16,7 @@ const enhancer = composeEnhancers(
 const store = createStore(reducer, {}, enhancer)
 
 //dev only
+//noinspection JSAnnotator
 window.store = store
 
 export default store
