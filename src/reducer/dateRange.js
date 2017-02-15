@@ -1,5 +1,6 @@
 import {SELECTED_ARTICLE} from '../constants'
 
+//а селект почему не сделал?
 export default (selectedArticle, action) => {
   const {type, payload} = action
   switch (type) {
