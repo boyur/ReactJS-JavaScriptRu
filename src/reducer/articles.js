@@ -8,6 +8,6 @@ export default (articles = defaultArticles, action) => {
         case DELETE_ARTICLE:
             return articles.filter(article => article.id !== payload.id)
     }
-
+    //fix
     return articles
 }
