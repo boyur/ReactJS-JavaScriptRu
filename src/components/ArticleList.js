@@ -8,6 +8,7 @@ class ArticleList extends Component {
         const {articles, dateRange, toggleOpenItem, isOpenItem} = this.props
         console.log(dateRange);
         let articleFiltred = articles;
+        //ок, но еще лучше делать фильтрацию в коннекте
         if(dateRange.to && dateRange.from) {
           articleFiltred = articles.filter(article => {
             console.log(Date.parse(dateRange.from), Date.parse(article.date), Date.parse(dateRange.to))
