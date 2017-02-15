@@ -15,7 +15,6 @@ class DateRange extends Component {
 
     handleDayClick = (e, day) => {
         this.setState(DateUtils.addDayToRange(day, this.state))
-        this.props.dateRange(DateUtils.addDayToRange(day, this.state))
     }
 
     render() {
