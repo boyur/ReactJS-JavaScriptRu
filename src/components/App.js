@@ -14,7 +14,7 @@ class App extends Component {
     }
 
     render() {
-        const {articles} = this.props
+        const {articles, dateRange} = this.props
         const options = articles.map(article => ({
             label: article.title,
             value: article.id
@@ -25,7 +25,7 @@ class App extends Component {
                 User: <input type="text" value={this.state.user} onChange={this.handleUserChange}/>
                 <Select options = {options} onChange={this.handleSelectChange} value={this.state.selection} multi/>
                 <DateRange />
-                <ArticleList articles={articles}/>
+                <ArticleList articles={articles} dateRange={dateRange}/>
                 <Chart articles={articles}/>
             </div>
         )
@@ -43,9 +43,11 @@ class App extends Component {
 }
 
 App.propTypes = {
-    articles: PropTypes.array.isRequired
+    articles: PropTypes.array.isRequired,
+    dateRange: PropTypes.object.isRequired
 }
 
 export default connect(state => ({
-    articles: state.articles
+    articles: state.articles,
+    dateRange: state.dateRange
 }))(App)
